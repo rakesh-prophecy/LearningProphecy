@@ -1,0 +1,97 @@
+name: HelloProphecy_Rakesh
+description: ''
+version: 0.0.1
+author: rakesh@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: helloprophecyrakesh
+  parentArtefactID: rakeshprophecyioteam
+  buildSystem: maven
+  author: null
+  createdAt: '2024-03-11 17:37:11'
+pipelines:
+  pipelines/CustomerOrders:
+    name: CustomerOrders
+    description: ''
+    author: rakesh@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2024-03-11 17:37:11'
+    datasets:
+      inputs:
+      - datasets/Customers
+      - datasets/Orders
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/Customers:
+    name: Customers
+    description: ''
+    author: rakesh@prophecy.io
+    createdAt: '2024-03-11 17:50:15'
+    mode: batch
+    physicalDatasets:
+      LearningFabric:
+        fabricId: 9869
+        datasetType: File
+        description: ''
+        author: rakesh@prophecy.io
+        createdAt: '2024-03-11 17:50:15'
+  datasets/Orders:
+    name: Orders
+    description: ''
+    author: rakesh@prophecy.io
+    createdAt: '2024-03-11 17:51:44'
+    mode: batch
+    physicalDatasets:
+      LearningFabric:
+        fabricId: 9869
+        datasetType: File
+        description: ''
+        author: rakesh@prophecy.io
+        createdAt: '2024-03-11 17:51:44'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-03-11 17:37:11'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '12652':
+    projectUID: 12652
+    projectName: ProphecyWarehouseScala
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12652.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2024-03-11 17:35:28'
+  '12651':
+    projectUID: 12651
+    projectName: ProphecySparkBasicsScala
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12651.git&subPath=
+    version: 0.1.2
+    isDefault: true
+    author: null
+    createdAt: '2024-03-11 17:35:28'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
