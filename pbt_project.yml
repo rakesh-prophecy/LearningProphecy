@@ -23,7 +23,10 @@ pipelines:
       inputs:
       - datasets/Customers
       - datasets/Orders
-      outputs: []
+      outputs:
+      - datasets/BasicCustomers
+      - datasets/PremiumCustomers
+      - datasets/SuperPremiumCustomers
     subgraphs: []
     dependencies: {}
 datasets:
@@ -53,6 +56,45 @@ datasets:
         description: ''
         author: rakesh@prophecy.io
         createdAt: '2024-03-11 17:51:44'
+  datasets/BasicCustomers:
+    name: BasicCustomers
+    description: ''
+    author: rakesh@prophecy.io
+    createdAt: '2024-03-12 06:34:41'
+    mode: batch
+    physicalDatasets:
+      LearningFabric:
+        fabricId: 9869
+        datasetType: File
+        description: ''
+        author: rakesh@prophecy.io
+        createdAt: '2024-03-12 06:34:41'
+  datasets/PremiumCustomers:
+    name: PremiumCustomers
+    description: ''
+    author: rakesh@prophecy.io
+    createdAt: '2024-03-12 06:35:11'
+    mode: batch
+    physicalDatasets:
+      LearningFabric:
+        fabricId: 9869
+        datasetType: File
+        description: ''
+        author: rakesh@prophecy.io
+        createdAt: '2024-03-12 06:35:11'
+  datasets/SuperPremiumCustomers:
+    name: SuperPremiumCustomers
+    description: ''
+    author: rakesh@prophecy.io
+    createdAt: '2024-03-12 06:35:43'
+    mode: batch
+    physicalDatasets:
+      LearningFabric:
+        fabricId: 9869
+        datasetType: File
+        description: ''
+        author: rakesh@prophecy.io
+        createdAt: '2024-03-12 06:35:43'
 templates: {}
 jobs: {}
 gemContainer:

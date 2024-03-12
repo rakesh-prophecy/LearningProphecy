@@ -21,6 +21,15 @@ object Main {
       join_customer_order(context, df_Customers, df_Orders)
     val df_amounts_by_customer_id =
       amounts_by_customer_id(context, df_join_customer_order)
+    val df_customers_total_amount =
+      customers_total_amount(context, df_amounts_by_customer_id)
+    val (df_by_total_amount_distribution_out0,
+         df_by_total_amount_distribution_out1,
+         df_by_total_amount_distribution_out2
+    ) = by_total_amount_distribution(context, df_customers_total_amount)
+    SuperPremiumCustomers(context, df_by_total_amount_distribution_out2)
+    BasicCustomers(context,        df_by_total_amount_distribution_out0)
+    PremiumCustomers(context,      df_by_total_amount_distribution_out1)
   }
 
   def main(args: Array[String]): Unit = {
